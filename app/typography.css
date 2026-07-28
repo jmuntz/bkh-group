@@ -1,0 +1,87 @@
+@layer base {
+  :root {
+    --fs-body: clamp(1rem, 0.22vw + 0.94rem, 1.125rem);
+    --fs-small: clamp(0.8rem, 0.14vw + 0.76rem, 0.9rem);
+    --fs-lead: clamp(1.05rem, 0.45vw + 0.95rem, 1.25rem);
+
+    --fs-h6: clamp(0.95rem, 0.2vw + 0.9rem, 1.05rem);
+    --fs-h5: clamp(1.1rem, 0.4vw + 1rem, 1.35rem);
+    --fs-h4: clamp(1.35rem, 0.9vw + 1.05rem, 1.85rem);
+    --fs-h3: clamp(1.7rem, 1.6vw + 1.1rem, 2.6rem);
+    --fs-h2: clamp(2.1rem, 2.8vw + 1.1rem, 3.75rem);
+    --fs-h1: clamp(2.8rem, 5.2vw + 1rem, 6.5rem);
+  }
+
+  body {
+    font-size: var(--fs-body);
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+  }
+
+  p,
+  li,
+  a,
+  label,
+  input,
+  textarea,
+  select,
+  button {
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  small {
+    font-size: var(--fs-small);
+    line-height: 1.45;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--bkh-text-strong);
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+  }
+
+  h1 {
+    font-size: var(--fs-h1);
+    letter-spacing: -0.045em;
+    line-height: 0.92;
+  }
+
+  h2 {
+    font-size: var(--fs-h2);
+    letter-spacing: -0.035em;
+    line-height: 1.02;
+    font-weight: 300;
+  }
+
+  h3 {
+    font-size: var(--fs-h3);
+    letter-spacing: -0.03em;
+    line-height: 1.08;
+    font-weight: 300;
+  }
+
+  h4 {
+    font-size: var(--fs-h4);
+    letter-spacing: -0.025em;
+    line-height: 1.12;
+  }
+
+  h5 {
+    font-size: var(--fs-h5);
+    line-height: 1.2;
+  }
+
+  h6 {
+    font-size: var(--fs-h6);
+    line-height: 1.25;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+}
