@@ -53,6 +53,7 @@ const COMMERCIAL_NOTES = [
   'v1 suits straightforward WordPress delivery - static sections, reusable templates and easier long-term maintenance.',
   'v2 suits a hosted custom build where motion, video and scroll behaviour are a priority.',
   'Only the homepage is in scope here. Remaining pages and templates are quoted once the direction is signed off.',
+  'Premium design also available at $150/mth AUD, all maintenance, running costs and unlimited revisions included.'
 ];
 
 const V2_CHANGES = [
