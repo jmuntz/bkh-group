@@ -16,11 +16,14 @@ export default function Nav() {
     pathname === '/' ||
     pathname === '/v1' ||
     pathname === '/v2' ||
+    pathname === '/v3' ||
     pathname === '/mockups/v1' ||
     pathname === '/mockups/v2' ||
     pathname === '/mockups/v3';
   const homeHref =
-    pathname === '/v2'
+    pathname === '/v3'
+      ? '/v3'
+      : pathname === '/v2'
       ? '/v2'
       : pathname === '/v1' || pathname === '/'
         ? '/v1'

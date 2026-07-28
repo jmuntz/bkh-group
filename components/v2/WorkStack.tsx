@@ -192,7 +192,7 @@ function opacityFromOffset(offset: number, role: 'image' | 'text') {
   return 1;
 }
 
-export default function WorkStack() {
+export default function WorkStack({ compact = false }: { compact?: boolean }) {
   const trackRef = useRef<HTMLDivElement>(null);
   const mediaRefs = useRef<(HTMLDivElement | null)[]>([]);
   const textRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -332,12 +332,20 @@ export default function WorkStack() {
             <p className="text-xs font-medium uppercase tracking-[0.28em] text-[var(--bkh-cta)]">
               {item.title}
             </p>
-            <h3 className="mt-5 max-w-[14ch] text-[clamp(2rem,3.4vw+1rem,3.75rem)] font-light leading-[1.05] tracking-[-0.04em] text-white">
+            <h3
+              className={`mt-5 max-w-[14ch] leading-[1.05] tracking-[-0.04em] text-white ${
+                compact
+                  ? 'font-display text-[clamp(2.25rem,4vw+1rem,4rem)]'
+                  : 'text-[clamp(2rem,3.4vw+1rem,3.75rem)] font-light'
+              }`}
+            >
               {item.project}
             </h3>
-            <p className="mt-8 max-w-xl text-[var(--fs-lead)] font-light leading-relaxed text-white/70">
-              {item.summary}
-            </p>
+            {compact ? null : (
+              <p className="mt-8 max-w-xl text-[var(--fs-lead)] font-light leading-relaxed text-white/70">
+                {item.summary}
+              </p>
+            )}
           </div>
         ))}
       </div>

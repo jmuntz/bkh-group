@@ -31,6 +31,12 @@ export default function ScrollMotion({ children, className }: ScrollMotionProps)
         el.style.opacity = '1';
         el.style.transform = 'none';
       });
+      root.querySelectorAll<HTMLElement>('[data-statement-headline], [data-statement-subline]').forEach(
+        (el) => {
+          el.style.opacity = '1';
+          el.style.transform = 'none';
+        }
+      );
       return;
     }
 
@@ -82,6 +88,25 @@ export default function ScrollMotion({ children, className }: ScrollMotionProps)
       );
     });
 
+    // Mild heading parallax: headings drift against scroll for Built-style depth.
+    root.querySelectorAll<HTMLElement>('[data-heading-parallax]').forEach((el) => {
+      const amount = Math.min(Math.max(Number(el.dataset.headingParallax) || 28, 12), 56);
+      const section = el.closest('section') ?? el;
+
+      el.style.willChange = 'transform';
+
+      animations.push(
+        animate(el, {
+          translateY: [`${amount * 0.4}px`, `-${amount}px`],
+          ease: 'linear',
+          autoplay: onScroll({
+            target: section,
+            sync: 0.18,
+          }),
+        })
+      );
+    });
+
     root.querySelectorAll<HTMLElement>('[data-scroll-scale]').forEach((el) => {
       const from = Number(el.dataset.scaleFrom) || 1.14;
       const to = Number(el.dataset.scaleTo) || 1.06;
@@ -94,6 +119,41 @@ export default function ScrollMotion({ children, className }: ScrollMotionProps)
           autoplay: onScroll({
             target: section,
             sync: 0.12,
+          }),
+        })
+      );
+    });
+
+    // Statement blocks: scroll-synced fade from left; subline delayed and offset.
+    root.querySelectorAll<HTMLElement>('[data-statement-headline]').forEach((el) => {
+      const section = el.closest('section') ?? el;
+      el.style.willChange = 'opacity, transform';
+
+      animations.push(
+        animate(el, {
+          opacity: [0, 1, 0],
+          translateX: ['-3rem', '0rem', '3rem'],
+          ease: 'linear',
+          autoplay: onScroll({
+            target: section,
+            sync: 0.36,
+          }),
+        })
+      );
+    });
+
+    root.querySelectorAll<HTMLElement>('[data-statement-subline]').forEach((el) => {
+      const section = el.closest('section') ?? el;
+      el.style.willChange = 'opacity, transform';
+
+      animations.push(
+        animate(el, {
+          opacity: [0, 1, 0],
+          translateX: ['-4.5rem', '1.25rem', '4rem'],
+          ease: 'linear',
+          autoplay: onScroll({
+            target: section,
+            sync: 0.52,
           }),
         })
       );

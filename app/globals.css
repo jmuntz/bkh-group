@@ -268,3 +268,71 @@ html.bkh-v2 ::-webkit-scrollbar-thumb:hover {
 html.bkh-v2 ::-webkit-scrollbar-corner {
   background: #070707;
 }
+
+/* v3 - dark theme + condensed display type (h1 stays Syne) */
+.bkh-theme-v3 {
+  --bkh-accent: #5c4468;
+  --bkh-accent-strong: #4a3654;
+  --bkh-accent-soft: #7d6a88;
+  --bkh-accent-tint: rgba(92, 68, 104, 0.22);
+
+  --bkh-page: #000000;
+  --bkh-surface: #000000;
+  --bkh-surface-muted: #0f0f0f;
+  --bkh-surface-subtle: #161616;
+  --bkh-ink: #000000;
+
+  --bkh-text-strong: #f5f5f2;
+  --bkh-text-body: rgba(245, 245, 242, 0.62);
+  --bkh-text-muted: rgba(245, 245, 242, 0.42);
+
+  --bkh-border: rgba(255, 255, 255, 0.16);
+  --bkh-border-strong: rgba(255, 255, 255, 0.28);
+
+  --brand: var(--bkh-accent);
+  --accent-light: var(--bkh-accent-soft);
+
+  font-family: var(--font-outfit), "Helvetica Neue", Arial, sans-serif;
+}
+
+.bkh-theme-v3 h2,
+.bkh-theme-v3 h3,
+.bkh-theme-v3 .font-display {
+  font-family: var(--font-v3-display), "Helvetica Neue", Arial, sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.bkh-theme-v3 h1,
+.bkh-theme-v3 h1.font-display {
+  font-family: var(--font-syne), "Helvetica Neue", Arial, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+}
+
+.bkh-theme-v3 [data-parallax],
+.bkh-theme-v3 [data-scroll-drift],
+.bkh-theme-v3 [data-scroll-scale],
+.bkh-theme-v3 [data-heading-parallax] {
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+.bkh-theme-v3 select {
+  color-scheme: dark;
+  background-color: transparent;
+  color: var(--bkh-text-strong);
+}
+
+.bkh-theme-v3 select option,
+.bkh-theme-v3 select optgroup {
+  background-color: #0a0a0a;
+  color: #f5f5f2;
+}
+
+.bkh-theme-v3 select option:checked,
+.bkh-theme-v3 select option:hover,
+.bkh-theme-v3 select option:focus {
+  background-color: #5c4468;
+  color: var(--bkh-cta);
+}
