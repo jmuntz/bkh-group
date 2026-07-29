@@ -16,7 +16,7 @@ export default function NotesPage() {
       <header className="border-b border-white/10 bg-black/90 backdrop-blur-md">
         <div className="mx-auto flex max-w-[820px] items-center justify-between gap-4 px-6 py-5 sm:px-8">
           <Link
-            href="/v1"
+            href="/"
             className="inline-flex items-center gap-2 text-sm font-light text-white/60 transition-colors hover:text-white"
           >
             <ArrowLeft size={16} aria-hidden />

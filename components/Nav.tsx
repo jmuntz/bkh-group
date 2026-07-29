@@ -11,7 +11,7 @@ export default function Nav() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const isV1 = pathname === '/v1' || pathname === '/';
+  const isV1 = pathname === '/' || pathname === '/v1';
   const isHome =
     pathname === '/' ||
     pathname === '/v1' ||
@@ -24,16 +24,16 @@ export default function Nav() {
     pathname === '/v3'
       ? '/v3'
       : pathname === '/v2'
-      ? '/v2'
-      : pathname === '/v1' || pathname === '/'
-        ? '/v1'
-        : pathname === '/mockups/v3'
-          ? '/mockups/v3'
-          : pathname === '/mockups/v2'
-            ? '/mockups/v2'
-            : pathname === '/mockups/v1'
-              ? '/mockups/v1'
-              : '/v1';
+        ? '/v2'
+        : pathname === '/' || pathname === '/v1'
+          ? '/'
+          : pathname === '/mockups/v3'
+            ? '/mockups/v3'
+            : pathname === '/mockups/v2'
+              ? '/mockups/v2'
+              : pathname === '/mockups/v1'
+                ? '/mockups/v1'
+                : '/';
   const hashPrefix = isHome ? '' : `${homeHref}`;
 
   // Fancy scroll pill on v2 etc. v1 only fills solid black for contrast.
