@@ -6,14 +6,15 @@ export const PANEL_SCOPE = [
 
 export const PANEL_DIRECTION = [
   'Lead with projects and capabilities, bold imagery and skim-able copy.',
-  'Dark portfolio-led direction with brand purple and accent yellow - less white space than the live site.',
+  'Dark portfolio-led direction with brand purple and yellow - less white space than the live site.',
+  'Dark theme chosen as as it contrasts far better with the bold imagery and makes the content more readable. Having a mix of lighter/white sections against dark can also be polarising.',
   'Similar to Built.com.au, but a little more content to help describe the business and services which Built fails to do effectively.',
   'Same core messaging as the brief - tier one structural partner with in-house formwork, concrete and scaffold.',
 ];
 
 export const PANEL_FUTURE = [
   'After Base is live, motion and interaction can be added as an optional enhancement - quoted separately.',
-  'Typical inclusions: hero video, scroll reveals, richer nav/menu motion and animated project presentation.',
+  'Typical inclusions: hero video, scroll reveals, richer nav/menu motion and animated project presentation. Mockup can be provided prior to delivery.',
 ];
 
 export const ENGAGEMENT_NOTES = [
