@@ -36,26 +36,3 @@ export function DesignNotesBullets({
     </ul>
   );
 }
-
-export function DesignNotesVersionBlock({
-  title,
-  intro,
-  changes,
-  outcomes,
-}: {
-  title: string;
-  intro: string;
-  changes: string[];
-  outcomes: string[];
-}) {
-  return (
-    <>
-      <p className="text-sm font-light leading-relaxed text-white/65">{intro}</p>
-      <DesignNotesBullets items={changes} />
-      <p className="mt-6 text-sm font-light italic text-white/50">In practice, that means:</p>
-      <div className="mt-4">
-        <DesignNotesBullets items={outcomes} />
-      </div>
-    </>
-  );
-}

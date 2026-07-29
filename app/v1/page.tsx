@@ -37,7 +37,7 @@ export default function HomeV1() {
         <ContactV2 />
       </main>
       <FooterV2 homeHref="/v1" />
-      <PreviewToolbar variant="v1" />
+      <PreviewToolbar />
     </div>
   );
 }

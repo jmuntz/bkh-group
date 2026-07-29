@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { ArrowRight } from '@phosphor-icons/react/dist/ssr';
 import { projects } from '@/lib/site-v1';
 
 function projectHref(title: string) {
@@ -25,9 +26,20 @@ export default function ProjectsV4() {
               A preferred contractor for many of Australia&rsquo;s leading builders.
             </h2>
           </div>
-          <p className="max-w-md font-light leading-relaxed text-white/55">
-            From towers and stadiums to hospitals and major infrastructure across NSW.
-          </p>
+          <div className="flex max-w-md flex-col gap-8">
+            <p className="font-light leading-relaxed text-white/55">
+              From towers and stadiums to hospitals and major infrastructure across NSW.
+            </p>
+            <a
+              href="#"
+              className="group inline-flex items-center gap-3 self-start text-xs font-medium uppercase tracking-[0.2em] text-white/55 transition-colors hover:text-white"
+            >
+              View more projects
+              <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/25 transition-[border-color,color,transform] duration-300 group-hover:translate-x-0.5 group-hover:border-[var(--bkh-cta)] group-hover:text-[var(--bkh-cta)]">
+                <ArrowRight size={16} weight="bold" aria-hidden />
+              </span>
+            </a>
+          </div>
         </div>
 
         <div className="mt-20 grid gap-5 sm:grid-cols-2 lg:mt-28 lg:gap-6">

@@ -3,17 +3,12 @@
 import { useEffect, useId, useState } from 'react';
 import Link from 'next/link';
 import { ArrowSquareOut, Note, X } from '@phosphor-icons/react';
-import { PANEL_SCOPE, VERSION_NOTES, versionName, type DesignNotesVariant } from '@/lib/design-notes';
-import {
-  DesignNotesBullets,
-  DesignNotesSection,
-  DesignNotesVersionBlock,
-} from './design-notes/DesignNotesBlocks';
+import { PANEL_DIRECTION, PANEL_FUTURE, PANEL_SCOPE } from '@/lib/design-notes';
+import { DesignNotesBullets, DesignNotesSection } from './design-notes/DesignNotesBlocks';
 
-export default function DesignNotes({ variant }: { variant: DesignNotesVariant }) {
+export default function DesignNotes() {
   const [open, setOpen] = useState(false);
   const titleId = useId();
-  const version = VERSION_NOTES[variant];
 
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : '';
@@ -51,7 +46,7 @@ export default function DesignNotes({ variant }: { variant: DesignNotesVariant }
           role="tooltip"
           className="pointer-events-none absolute bottom-full right-0 mb-3 whitespace-nowrap rounded-md bg-black px-3 py-1.5 text-xs font-medium tracking-wide text-white opacity-0 shadow-lg transition-opacity duration-200 group-hover/tip:opacity-100 group-focus-within/tip:opacity-100"
         >
-          What&apos;s different in {versionName(variant)}
+          Brief and next steps
         </span>
       </div>
 
@@ -80,7 +75,7 @@ export default function DesignNotes({ variant }: { variant: DesignNotesVariant }
           <div className="flex items-start justify-between gap-4 border-b border-white/10 px-6 py-5">
             <div>
               <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-[var(--bkh-cta)]">
-                {versionName(variant)} · Homepage concepts
+                Homepage concept
               </p>
               <h2 id={titleId} className="mt-2 text-xl font-light tracking-[-0.02em] text-white">
                 Design notes
@@ -101,8 +96,12 @@ export default function DesignNotes({ variant }: { variant: DesignNotesVariant }
               <DesignNotesBullets items={PANEL_SCOPE} />
             </DesignNotesSection>
 
-            <DesignNotesSection title={version.title}>
-              <DesignNotesVersionBlock {...version} />
+            <DesignNotesSection title="Direction">
+              <DesignNotesBullets items={PANEL_DIRECTION} />
+            </DesignNotesSection>
+
+            <DesignNotesSection title="Optional future phase">
+              <DesignNotesBullets items={PANEL_FUTURE} tone="muted" />
             </DesignNotesSection>
           </div>
 

@@ -10,7 +10,6 @@ import ProjectsV3 from '../../components/v3/Projects';
 import HireV3 from '../../components/v3/Hire';
 import ContactV3 from '../../components/v3/Contact';
 import FooterV3 from '../../components/v3/Footer';
-import PreviewToolbar from '../../components/PreviewToolbar';
 
 export const metadata: Metadata = {
   title: 'BKH Group | Vertically Integrated Structural Solutions',
@@ -40,7 +39,6 @@ export default function HomeV3() {
         <ContactV3 />
       </main>
       <FooterV3 homeHref="/v3" />
-      <PreviewToolbar variant="v3" />
     </ScrollMotion>
   );
 }
