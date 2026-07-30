@@ -3,7 +3,7 @@
 import { useEffect, useId, useState } from 'react';
 import Link from 'next/link';
 import { ArrowSquareOut, Note, X } from '@phosphor-icons/react';
-import { PANEL_DIRECTION, PANEL_FUTURE, PANEL_SCOPE } from '@/lib/design-notes';
+import { PANEL_DIRECTION, PANEL_SCOPE } from '@/lib/design-notes';
 import { DesignNotesBullets, DesignNotesSection } from './design-notes/DesignNotesBlocks';
 
 export default function DesignNotes() {
@@ -98,10 +98,6 @@ export default function DesignNotes() {
 
             <DesignNotesSection title="Direction">
               <DesignNotesBullets items={PANEL_DIRECTION} />
-            </DesignNotesSection>
-
-            <DesignNotesSection title="Optional future phase">
-              <DesignNotesBullets items={PANEL_FUTURE} tone="muted" />
             </DesignNotesSection>
           </div>
 

@@ -12,11 +12,6 @@ export const PANEL_DIRECTION = [
   'Same core messaging as the brief - tier one structural partner with in-house formwork, concrete and scaffold.',
 ];
 
-export const PANEL_FUTURE = [
-  'After Base is live, motion and interaction can be added as an optional enhancement - quoted separately.',
-  'Typical inclusions: hero video, scroll reveals, richer nav/menu motion and animated project presentation. Mockup can be provided prior to delivery.',
-];
-
 export const ENGAGEMENT_NOTES = [
   'This is a look and feel mockup - not a full or final design. Layout, typography, colour and homepage rhythm are the focus.',
   'Additional pages (services, projects, Sales & Hire, contact and project templates) will be designed to match once this direction is approved.',
@@ -60,16 +55,10 @@ export const CONTENT_POINTS = [
 ];
 
 export const COMMERCIAL_NOTES = [
-  'This homepage concept is scoped for WordPress delivery within the quoted design and build milestones.',
-  'Only the homepage is in scope for this look-and-feel phase. Remaining pages and templates are quoted once the direction is signed off.',
-  'A later enhancement phase can add motion, video and scroll behaviour if desired - scoped and priced separately after the Base site is live.',
-];
-
-export const FUTURE_PHASE_NOTES = [
-  'Once the Base site is approved and live, a separate enhancement phase can layer motion and interaction on top of the same design system.',
-  'Typical inclusions: looping hero video, scroll-triggered section reveals, richer navigation and mobile menu motion, animated project presentation and layered service-card hover states.',
-  'This keeps the first build focused on brand, content and WordPress maintainability - then invests in polish where it adds the most impact.',
-  'Enhancement work is optional and quoted separately. It can also sit on a $150 AUD/month flexiplan covering hosting, maintenance, fixes and content edits for the duration of the agreement saving upfront costs.',
+  'This is not a finished product.',
+  'This homepage concept is scoped for WordPress delivery within the quoted design and build milestones. ',
+  'Only the homepage is in scope for this look-and-feel phase. Fade in animations will be added during build.',
+  'Scrolling animation, parallax and similar complex, interactive elements can also be added during build, but may need to be scoped seperate depending on complexity and if desired.',
 ];
 
 export const THEME_STYLE_INTRO =

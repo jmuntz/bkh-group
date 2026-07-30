@@ -3,7 +3,6 @@ import {
   COMMERCIAL_NOTES,
   CONTENT_POINTS,
   ENGAGEMENT_NOTES,
-  FUTURE_PHASE_NOTES,
   LIVE_SITE_NOTES,
   THEME_STYLE_INTRO,
   THEME_STYLE_POINTS,
@@ -49,14 +48,6 @@ export default function DesignNotesFull() {
 
       <DesignNotesSection title="Next steps and commercial">
         <DesignNotesBullets items={COMMERCIAL_NOTES} tone="muted" />
-      </DesignNotesSection>
-
-      <DesignNotesSection title="Optional future phase">
-        <p className="mb-4 text-sm font-light leading-relaxed text-white/65">
-          Motion and interaction can follow as a later enhancement on the same look and feel -
-          after Base is approved and live.
-        </p>
-        <DesignNotesBullets items={FUTURE_PHASE_NOTES} />
       </DesignNotesSection>
     </div>
   );
