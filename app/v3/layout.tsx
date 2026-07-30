@@ -1,16 +1,5 @@
-import { Stack_Sans_Notch } from 'next/font/google';
 import V2HtmlClass from '../v2/V2HtmlClass';
 
-const stackSansNotch = Stack_Sans_Notch({
-  subsets: ['latin'],
-  variable: '--font-v3-display',
-  display: 'swap',
-});
-
 export default function V3Layout({ children }: { children: React.ReactNode }) {
-  return (
-    <div className={stackSansNotch.variable}>
-      <V2HtmlClass>{children}</V2HtmlClass>
-    </div>
-  );
+  return <V2HtmlClass>{children}</V2HtmlClass>;
 }

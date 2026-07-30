@@ -1,15 +1,14 @@
 import { Metadata } from 'next';
 import Nav from '../../components/Nav';
 import ScrollMotion from '../../components/v2/ScrollMotion';
-import HeroV3 from '../../components/v3/Hero';
-import { StatementAnniversary, StatementPackages } from '../../components/v3/CompanyStatements';
-import ServicesV3 from '../../components/v3/Services';
-import FeaturedProjectV3 from '../../components/v3/FeaturedProject';
-import AboutStackV3 from '../../components/v3/AboutStack';
-import ProjectsV3 from '../../components/v3/Projects';
-import HireV3 from '../../components/v3/Hire';
-import ContactV3 from '../../components/v3/Contact';
-import FooterV3 from '../../components/v3/Footer';
+import HeroV2 from '../../components/v2/Hero';
+import ServicesV2 from '../../components/v2/Services';
+import FeaturedProjectV2 from '../../components/v2/FeaturedProject';
+import AboutStack from '../../components/v2/AboutStack';
+import ProjectsV2 from '../../components/mockups/v3/Projects';
+import HireV2 from '../../components/v2/Hire';
+import ContactV2 from '../../components/v2/Contact';
+import FooterV2 from '../../components/v2/Footer';
 
 export const metadata: Metadata = {
   title: 'BKH Group | Vertically Integrated Structural Solutions',
@@ -25,20 +24,18 @@ export const metadata: Metadata = {
 
 export default function HomeV3() {
   return (
-    <ScrollMotion className="bkh-theme-v3 min-h-screen bg-black text-white">
+    <ScrollMotion className="bkh-theme-v2 min-h-screen bg-black text-white">
       <Nav />
       <main>
-        <HeroV3 />
-        <StatementAnniversary />
-        <ServicesV3 />
-        <StatementPackages />
-        <FeaturedProjectV3 />
-        <AboutStackV3 />
-        <ProjectsV3 />
-        <HireV3 />
-        <ContactV3 />
+        <HeroV2 />
+        <ServicesV2 />
+        <FeaturedProjectV2 />
+        <AboutStack />
+        <ProjectsV2 />
+        <HireV2 />
+        <ContactV2 />
       </main>
-      <FooterV3 homeHref="/v3" />
+      <FooterV2 homeHref="/v3" />
     </ScrollMotion>
   );
 }

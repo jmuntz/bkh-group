@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { FacebookLogo, InstagramLogo, LinkedinLogo } from '@phosphor-icons/react/dist/ssr';
 import { site, services, hireSystems } from '@/lib/site-v2';
 
-export default function FooterV3({ homeHref = '/v3' }: { homeHref?: string }) {
+export default function FooterV3({ homeHref = '/v2' }: { homeHref?: string }) {
   return (
     <footer className="border-t border-white/10 bg-black px-5 pb-10 pt-24 text-white sm:px-8 lg:px-12 lg:pt-32">
       <div className="mx-auto grid max-w-[1440px] gap-16 lg:grid-cols-12 lg:gap-12">
